@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		371ED3CD2499EB1F00CBE2B5 /* SocketServersDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3CC2499EB1F00CBE2B5 /* SocketServersDemoTests.m */; };
 		371ED3D82499EB1F00CBE2B5 /* SocketServersDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3D72499EB1F00CBE2B5 /* SocketServersDemoUITests.m */; };
 		371ED3EA249A0C9800CBE2B5 /* GCDAsyncSocketServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3E9249A0C9800CBE2B5 /* GCDAsyncSocketServerViewController.m */; };
+		371ED3FC249B5DA800CBE2B5 /* UIBezierPath+Point.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3FB249B5DA800CBE2B5 /* UIBezierPath+Point.m */; };
+		371ED3FF249B5DC300CBE2B5 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3FE249B5DC300CBE2B5 /* DrawView.m */; };
+		371ED402249B5E1500CBE2B5 /* DrawViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED401249B5E1500CBE2B5 /* DrawViewViewController.m */; };
 		665C8C948218B67551C59626 /* Pods_SocketServersDemo_SocketServersDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC493BB7A84E0BFFD9328C8 /* Pods_SocketServersDemo_SocketServersDemoUITests.framework */; };
 		81D4D6FEACD7C5366767D79D /* Pods_SocketServersDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BD022AC763FDAF195A989A /* Pods_SocketServersDemoTests.framework */; };
 		CBBB880BC90EBE49478F5CAF /* Pods_SocketServersDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B478869CD63D5D27576E50 /* Pods_SocketServersDemo.framework */; };
@@ -63,6 +66,12 @@
 		371ED3D92499EB1F00CBE2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		371ED3E8249A0C9800CBE2B5 /* GCDAsyncSocketServerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocketServerViewController.h; sourceTree = "<group>"; };
 		371ED3E9249A0C9800CBE2B5 /* GCDAsyncSocketServerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocketServerViewController.m; sourceTree = "<group>"; };
+		371ED3FA249B5DA800CBE2B5 /* UIBezierPath+Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+Point.h"; path = "../../../SocketDemo/SocketDemo/DrawBoard/UIBezierPath+Point.h"; sourceTree = "<group>"; };
+		371ED3FB249B5DA800CBE2B5 /* UIBezierPath+Point.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+Point.m"; path = "../../../SocketDemo/SocketDemo/DrawBoard/UIBezierPath+Point.m"; sourceTree = "<group>"; };
+		371ED3FD249B5DC300CBE2B5 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		371ED3FE249B5DC300CBE2B5 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		371ED400249B5E1500CBE2B5 /* DrawViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewViewController.h; sourceTree = "<group>"; };
+		371ED401249B5E1500CBE2B5 /* DrawViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewViewController.m; sourceTree = "<group>"; };
 		41A189B8651D4C7F0BAC15E1 /* Pods-SocketServersDemo-SocketServersDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketServersDemo-SocketServersDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocketServersDemo-SocketServersDemoUITests/Pods-SocketServersDemo-SocketServersDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		991B79C314E8E5E1A0A30A93 /* Pods-SocketServersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketServersDemo.release.xcconfig"; path = "Target Support Files/Pods-SocketServersDemo/Pods-SocketServersDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B3E606E3E30F3BBF4964A0E0 /* Pods-SocketServersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketServersDemo.debug.xcconfig"; path = "Target Support Files/Pods-SocketServersDemo/Pods-SocketServersDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +143,7 @@
 		371ED3AF2499EB1C00CBE2B5 /* SocketServersDemo */ = {
 			isa = PBXGroup;
 			children = (
+				371ED3F9249B5D9500CBE2B5 /* DrawBoard */,
 				371ED3B02499EB1C00CBE2B5 /* AppDelegate.h */,
 				371ED3B12499EB1C00CBE2B5 /* AppDelegate.m */,
 				371ED3B32499EB1C00CBE2B5 /* SceneDelegate.h */,
@@ -169,6 +179,19 @@
 			path = SocketServersDemoUITests;
 			sourceTree = "<group>";
 		};
+		371ED3F9249B5D9500CBE2B5 /* DrawBoard */ = {
+			isa = PBXGroup;
+			children = (
+				371ED3FA249B5DA800CBE2B5 /* UIBezierPath+Point.h */,
+				371ED3FB249B5DA800CBE2B5 /* UIBezierPath+Point.m */,
+				371ED3FD249B5DC300CBE2B5 /* DrawView.h */,
+				371ED3FE249B5DC300CBE2B5 /* DrawView.m */,
+				371ED400249B5E1500CBE2B5 /* DrawViewViewController.h */,
+				371ED401249B5E1500CBE2B5 /* DrawViewViewController.m */,
+			);
+			path = DrawBoard;
+			sourceTree = "<group>";
+		};
 		ACA8537D84FDBEB0759CA31C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +202,6 @@
 				0E102CF3C334F1F2C997849A /* Pods-SocketServersDemoTests.debug.xcconfig */,
 				D1E2CE4EC6F2968CF30AB703 /* Pods-SocketServersDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -423,7 +445,10 @@
 			files = (
 				371ED3EA249A0C9800CBE2B5 /* GCDAsyncSocketServerViewController.m in Sources */,
 				371ED3B82499EB1C00CBE2B5 /* ViewController.m in Sources */,
+				371ED3FC249B5DA800CBE2B5 /* UIBezierPath+Point.m in Sources */,
+				371ED402249B5E1500CBE2B5 /* DrawViewViewController.m in Sources */,
 				371ED3B22499EB1C00CBE2B5 /* AppDelegate.m in Sources */,
+				371ED3FF249B5DC300CBE2B5 /* DrawView.m in Sources */,
 				371ED3C32499EB1F00CBE2B5 /* main.m in Sources */,
 				371ED3B52499EB1C00CBE2B5 /* SceneDelegate.m in Sources */,
 			);

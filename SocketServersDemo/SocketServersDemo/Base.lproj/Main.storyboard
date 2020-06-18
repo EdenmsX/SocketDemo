@@ -47,6 +47,14 @@
                                     <segue destination="sIN-eY-ccv" kind="push" id="5kJ-pe-wjE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nND-rx-bfr">
+                                <rect key="frame" x="109" y="555" width="198" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GCDAsyncSocket画板服务器"/>
+                                <connections>
+                                    <segue destination="twV-2X-QyT" kind="push" id="ljC-zS-dQ5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ugQ-m5-TN7"/>
@@ -56,6 +64,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cb8-tN-hg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-757" y="122"/>
+        </scene>
+        <!--Draw View View Controller-->
+        <scene sceneID="H9i-79-EN9">
+            <objects>
+                <viewController id="twV-2X-QyT" customClass="DrawViewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TXr-hA-E2b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AoD-zQ-tui" customClass="DrawView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eh4-b0-1mz" firstAttribute="bottom" secondItem="AoD-zQ-tui" secondAttribute="bottom" id="5XC-Ok-sM5"/>
+                            <constraint firstItem="AoD-zQ-tui" firstAttribute="top" secondItem="eh4-b0-1mz" secondAttribute="top" id="8jw-3y-tFL"/>
+                            <constraint firstItem="eh4-b0-1mz" firstAttribute="trailing" secondItem="AoD-zQ-tui" secondAttribute="trailing" id="H7h-vO-FVW"/>
+                            <constraint firstItem="AoD-zQ-tui" firstAttribute="leading" secondItem="eh4-b0-1mz" secondAttribute="leading" id="URf-f1-elX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eh4-b0-1mz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HI3-mJ-qs6"/>
+                    <connections>
+                        <outlet property="drawView" destination="AoD-zQ-tui" id="Ube-3l-vml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyS-Tg-1O3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="741"/>
         </scene>
         <!--Async Socket Server View Controller-->
         <scene sceneID="jlj-1q-slc">

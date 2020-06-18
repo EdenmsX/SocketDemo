@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		00E7AF89C8EC57F5EF2C32F6 /* Pods_SocketDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACDF82EDFA1609B6E0E4E70 /* Pods_SocketDemo.framework */; };
 		371ED3E72499F65400CBE2B5 /* GCDAsynSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3E62499F65400CBE2B5 /* GCDAsynSocketViewController.m */; };
+		371ED3F1249B457200CBE2B5 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3F0249B457200CBE2B5 /* DrawView.m */; };
+		371ED3F4249B459100CBE2B5 /* DrawBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3F2249B459100CBE2B5 /* DrawBoardViewController.m */; };
+		371ED3F8249B5A7900CBE2B5 /* UIBezierPath+Point.m in Sources */ = {isa = PBXBuildFile; fileRef = 371ED3F7249B5A7900CBE2B5 /* UIBezierPath+Point.m */; };
 		376AE2F92498B39E0009D6F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 376AE2F82498B39E0009D6F1 /* AppDelegate.m */; };
 		376AE2FC2498B39E0009D6F1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 376AE2FB2498B39E0009D6F1 /* SceneDelegate.m */; };
 		376AE2FF2498B39E0009D6F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376AE2FE2498B39E0009D6F1 /* ViewController.m */; };
@@ -43,6 +46,12 @@
 		1725C42E3B58006B94EABE7D /* Pods-SocketDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketDemoTests.release.xcconfig"; path = "Target Support Files/Pods-SocketDemoTests/Pods-SocketDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		371ED3E52499F65400CBE2B5 /* GCDAsynSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsynSocketViewController.h; sourceTree = "<group>"; };
 		371ED3E62499F65400CBE2B5 /* GCDAsynSocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsynSocketViewController.m; sourceTree = "<group>"; };
+		371ED3EF249B457200CBE2B5 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		371ED3F0249B457200CBE2B5 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		371ED3F2249B459100CBE2B5 /* DrawBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBoardViewController.m; sourceTree = "<group>"; };
+		371ED3F3249B459100CBE2B5 /* DrawBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBoardViewController.h; sourceTree = "<group>"; };
+		371ED3F6249B5A7800CBE2B5 /* UIBezierPath+Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Point.h"; sourceTree = "<group>"; };
+		371ED3F7249B5A7900CBE2B5 /* UIBezierPath+Point.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Point.m"; sourceTree = "<group>"; };
 		376AE2F42498B39E0009D6F1 /* SocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376AE2F72498B39E0009D6F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		376AE2F82498B39E0009D6F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +131,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		371ED3EB249B443300CBE2B5 /* DrawBoard */ = {
+			isa = PBXGroup;
+			children = (
+				371ED3F3249B459100CBE2B5 /* DrawBoardViewController.h */,
+				371ED3F2249B459100CBE2B5 /* DrawBoardViewController.m */,
+				371ED3EF249B457200CBE2B5 /* DrawView.h */,
+				371ED3F0249B457200CBE2B5 /* DrawView.m */,
+				371ED3F6249B5A7800CBE2B5 /* UIBezierPath+Point.h */,
+				371ED3F7249B5A7900CBE2B5 /* UIBezierPath+Point.m */,
+			);
+			path = DrawBoard;
+			sourceTree = "<group>";
+		};
 		376AE2EB2498B39E0009D6F1 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +169,7 @@
 		376AE2F62498B39E0009D6F1 /* SocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				371ED3EB249B443300CBE2B5 /* DrawBoard */,
 				376AE2F72498B39E0009D6F1 /* AppDelegate.h */,
 				376AE2F82498B39E0009D6F1 /* AppDelegate.m */,
 				376AE2FA2498B39E0009D6F1 /* SceneDelegate.h */,
@@ -420,11 +443,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371ED3F8249B5A7900CBE2B5 /* UIBezierPath+Point.m in Sources */,
 				376AE2FF2498B39E0009D6F1 /* ViewController.m in Sources */,
 				371ED3E72499F65400CBE2B5 /* GCDAsynSocketViewController.m in Sources */,
 				376AE2F92498B39E0009D6F1 /* AppDelegate.m in Sources */,
 				376AE30A2498B3A00009D6F1 /* main.m in Sources */,
+				371ED3F1249B457200CBE2B5 /* DrawView.m in Sources */,
 				376AE2FC2498B39E0009D6F1 /* SceneDelegate.m in Sources */,
+				371ED3F4249B459100CBE2B5 /* DrawBoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
